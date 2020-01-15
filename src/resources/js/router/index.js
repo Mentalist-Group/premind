@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import ExampleComponent from '../components/ExampleComponent.vue'
+import Home from '../pages/Home.vue'
+import Login from '../pages/Login.vue'
 
 Vue.use(Router)
 
@@ -10,8 +11,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'ExampleComponent',
-      component: ExampleComponent
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ]
 })

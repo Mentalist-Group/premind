@@ -1,9 +1,25 @@
 <template>
-  <div>
+  <v-app id="inspire">
+    <header>
+      <Navbar />
+    </header>
     <main>
-      <div class="container">
+      <v-content>
         <router-view/>
-      </div>
+      </v-content>
     </main>
-  </div>
+    <Footer />
+  </v-app>
 </template>
+
+<script>
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+
+export default {
+  components: {
+    Navbar,
+    Footer
+  }
+}
+</script>
