@@ -1,9 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-    >
+    <v-navigation-drawer v-model="drawer" app>
       <v-list dense>
         <v-list-item link>
           <v-list-item-action>
@@ -24,11 +21,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
-      app
-      color="indigo"
-      dark
-    >
+    <v-app-bar app color="indigo" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>premind</v-toolbar-title>
     </v-app-bar>
@@ -37,10 +30,10 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      drawer: false // navbarの開閉
+      drawer: false, // navbarの開閉
     }
-  }
+  },
 }
 </script>
