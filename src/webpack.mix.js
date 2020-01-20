@@ -27,10 +27,14 @@ if (!mix.inProduction()) {
     })
 }
 
-mix.browserSync({
-    files: ['resources/js/**/*'],
-    proxy: '0.0.0.0:8081', 
-    open: false
-    })
-    .js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .browserSync({
+        files: ['resources/js/*', 'resources/sass/**/*', 'resources/views/**/*', 'public/css/**/*'],
+        proxy: '127.0.0.1:8080',
+        open: false
+      });
+
+if (mix.inProduction()) {
+    mix.version();
+}

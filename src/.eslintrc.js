@@ -36,6 +36,7 @@ module.exports = {
         bracketSpacing: true,
         arrowParens: 'avoid',
         semi: false,
+        ignoreChainWithDepth: 2,
       },
     ]
   }
