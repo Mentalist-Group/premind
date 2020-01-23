@@ -55,7 +55,7 @@
                     id="login-password"
                     v-model="loginForm.password"
                     label="Password"
-                    rules="required|min:4"
+                    rules="required|min:8"
                     prepend-icon="lock"
                   />
                 </v-form>
@@ -90,7 +90,7 @@
                     id="password"
                     v-model="registerForm.password"
                     label="Password"
-                    rules="required|min:4"
+                    rules="required|min:8"
                     prepend-icon="lock"
                     type="password"
                   />
@@ -98,7 +98,7 @@
                     id="password-confirmation"
                     v-model="registerForm.password_confirmation"
                     label="Password Confirmation"
-                    rules="required|min:4"
+                    rules="required|min:8"
                     prepend-icon="lock"
                     type="password"
                   />
