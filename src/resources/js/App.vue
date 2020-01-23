@@ -3,11 +3,9 @@
     <header>
       <Navbar />
     </header>
-    <main>
-      <v-content>
-        <router-view />
-      </v-content>
-    </main>
+    <v-content>
+      <router-view />
+    </v-content>
     <Footer />
   </v-app>
 </template>

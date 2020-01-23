@@ -26,6 +26,7 @@
       <RouterLink class="navbar__brand" to="/">
         <v-toolbar-title>premind</v-toolbar-title>
       </RouterLink>
+      <v-spacer />
       <div class="navbar__menu">
         <div v-if="isLogin" class="navbar__item">
           <button class="button">
