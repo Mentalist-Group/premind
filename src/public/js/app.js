@@ -25027,7 +25027,7 @@ var render = function() {
                                           attrs: {
                                             id: "login-password",
                                             label: "Password",
-                                            rules: "required|min:4",
+                                            rules: "required|min:8",
                                             "prepend-icon": "lock"
                                           },
                                           model: {
@@ -25161,7 +25161,7 @@ var render = function() {
                                           attrs: {
                                             id: "password",
                                             label: "Password",
-                                            rules: "required|min:4",
+                                            rules: "required|min:8",
                                             "prepend-icon": "lock",
                                             type: "password"
                                           },
@@ -25182,7 +25182,7 @@ var render = function() {
                                           attrs: {
                                             id: "password-confirmation",
                                             label: "Password Confirmation",
-                                            rules: "required|min:4",
+                                            rules: "required|min:8",
                                             "prepend-icon": "lock",
                                             type: "password"
                                           },
