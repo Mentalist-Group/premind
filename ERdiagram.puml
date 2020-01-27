@@ -1,0 +1,36 @@
+@startuml erdiagram
+entity "users" {
+    + id [PK]
+    ==
+    name
+    email
+    email_verified_at
+    password
+    remember_token
+    created_at
+    updated_at
+}
+
+entity "study_contents" {
+    + id [PK]
+    ==
+    study_title
+    content
+    interval_type
+    study_times
+    allocation_tag
+    created_at
+    updated_at
+}
+
+entity "tags" {
+    + id [PK]
+    ==
+    tag
+    created_at
+    updated_at
+}
+
+users --|{ study_contents
+
+@enduml
