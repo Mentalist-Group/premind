@@ -11,26 +11,37 @@ entity "users" {
     updated_at
 }
 
-entity "study_contents" {
-    + id [PK]
+entity "m_tags" {
+    + tag_id [PK]
+    ==
+    tag_name
+    created_at
+    updated_at
+}
+
+entity "t_study_contents" {
+    + study_id [PK]
     ==
     study_title
     content
     interval_type
     study_times
-    allocation_tag
+    # user_id [FK(users,id)]
     created_at
     updated_at
 }
 
-entity "tags" {
-    + id [PK]
+entity "t_study_content_tags" {
+    + study_id [FPK]
+    + tag_id [FPK]
     ==
-    tag
     created_at
     updated_at
 }
 
-users --|{ study_contents
+users --|{ t_study_contents
+m_tags --|{t_study_content_tags
+t_study_contents --|{t_study_content_tags
+
 
 @enduml
