@@ -3,7 +3,7 @@ entity "users" {
     + id [PK]
     ==
     name
-    email
+    * email [UK]
     email_verified_at
     password
     remember_token
@@ -26,14 +26,14 @@ entity "t_study_contents" {
     content
     interval_type
     study_times
-    # user_id [FK(users,id)]
+    # user_id [FK(users, id)]
     created_at
     updated_at
 }
 
 entity "t_study_content_tags" {
-    + study_id [FPK]
-    + tag_id [FPK]
+    - study_id [FPK(t_study_contents, study_id)]
+    - tag_id [FPK(m_tags,tag_id)]
     ==
     created_at
     updated_at
