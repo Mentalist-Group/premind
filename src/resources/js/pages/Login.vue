@@ -57,6 +57,7 @@
                     label="Password"
                     rules="required|min:8"
                     prepend-icon="lock"
+                    type="password"
                   />
                 </v-form>
               </v-card-text>
