@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'name' => 'nakajima',
             'email' => 'nakajima@nakajima.jp',
-            'password' => 'test_nakajima'
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'
         ];
         $userData = new User;
         $userData->fill($param)->save();
@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
         $param = [
             'name' => 'nakamura',
             'email' => 'nakamura@nakamura.jp',
-            'password' => 'test_nakamura'
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'
         ];
         $userData = new User;
         $userData->fill($param)->save();
