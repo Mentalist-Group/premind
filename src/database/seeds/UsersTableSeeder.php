@@ -17,15 +17,15 @@ class UsersTableSeeder extends Seeder
             'email' => 'nakajima@nakajima.jp',
             'password' => 'test_nakajima'
         ];
-        $restdata = new User;
-        $restdata->fill($param)->save();
+        $userData = new User;
+        $userData->fill($param)->save();
 
         $param = [
             'name' => 'nakamura',
             'email' => 'nakamura@nakamura.jp',
             'password' => 'test_nakamura'
         ];
-        $restdata = new User;
-        $restdata->fill($param)->save();
+        $userData = new User;
+        $userData->fill($param)->save();
     }
 }
