@@ -1,0 +1,47 @@
+@startuml erdiagram
+entity "users" {
+    + id [PK]
+    ==
+    name
+    * email [UK]
+    email_verified_at
+    password
+    remember_token
+    created_at
+    updated_at
+}
+
+entity "m_tags" {
+    + tag_id [PK]
+    ==
+    tag_name
+    created_at
+    updated_at
+}
+
+entity "t_study_contents" {
+    + study_id [PK]
+    ==
+    study_title
+    content
+    interval_type
+    study_times
+    # user_id [FK(users, id)]
+    created_at
+    updated_at
+}
+
+entity "t_study_content_tags" {
+    - study_id [FPK(t_study_contents, study_id)]
+    - tag_id [FPK(m_tags,tag_id)]
+    ==
+    created_at
+    updated_at
+}
+
+users --o{ t_study_contents
+m_tags --o{t_study_content_tags
+t_study_contents --o{t_study_content_tags
+
+
+@enduml
