@@ -41,7 +41,7 @@ entity "t_study_content_tags" {
 
 users --o{ t_study_contents
 m_tags --o{t_study_content_tags
-t_study_contents --|{t_study_content_tags
+t_study_contents --o{t_study_content_tags
 
 
 @enduml
