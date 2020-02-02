@@ -2437,6 +2437,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -25028,7 +25029,8 @@ var render = function() {
                                             id: "login-password",
                                             label: "Password",
                                             rules: "required|min:8",
-                                            "prepend-icon": "lock"
+                                            "prepend-icon": "lock",
+                                            type: "password"
                                           },
                                           model: {
                                             value: _vm.loginForm.password,
